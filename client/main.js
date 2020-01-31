@@ -5,6 +5,9 @@ import './main.html';
 
 import { Places } from '../lib/places'
 
+import React, {Component} from 'react';
+import { render } from 'react-dom';
+
 Template.body.helpers({
   places: 
   // [
@@ -56,3 +59,17 @@ Template.place.events({
 		Places.remove(this._id);
 	}
 });
+
+Meteor.startup(() => {
+	render(<App />, document.getElementById('render-target'));
+});
+
+class App extends Component
+{
+	render()
+	{
+		return (
+			<h1>hello</h1>
+		);
+	}
+}

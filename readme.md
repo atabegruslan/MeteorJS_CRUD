@@ -1,3 +1,4 @@
+# Meteor
 
 - https://www.youtube.com/watch?v=9494-2E4riQ
 - https://www.youtube.com/watch?feature=youtu.be&v=vSFH1T3SnBY
@@ -20,3 +21,9 @@ meteor mongo
 db.places.insert({name: 'Blah'})
 db.places.insert({name: 'Whatever'})
 ```
+
+---
+
+# React
+
+`meteor npm install --save react react-dom`
