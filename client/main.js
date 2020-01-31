@@ -1,10 +1,9 @@
 import { Template } from 'meteor/templating';
 import { ReactiveVar } from 'meteor/reactive-var';
-import { Mongo } from 'meteor/mongo';
 
 import './main.html';
 
-Places = new Mongo.Collection('destinations');
+import { Places } from '../lib/places'
 
 Template.body.helpers({
   places: 
@@ -19,7 +18,8 @@ Template.body.helpers({
   // db.destinations.insert({name:'Dubrovnik',createdAt: new Date()});
   function()
   {
-  	return Places.find();
+  	console.dir(Places.find({}));
+  	return Places.find({});
   },
 
   dump(jsonObject) 
