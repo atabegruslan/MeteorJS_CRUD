@@ -1,0 +1,28 @@
+<head>
+  <title>travel_list</title>
+</head>
+
+<body>
+  <h1>Travel List</h1>
+
+  <form class="new-place">
+    <input type="text" name="name" placeholder="Enter a new destination">
+    <input type="submit" value="Submit">
+  </form>
+
+  <ul>
+    {{dump places}}
+
+    {{#each places}}
+      {{> place}}
+    {{/each}}
+  </ul>
+</body>
+
+<template name="place">
+  <li>
+    <input class="toggle-checked" type="checkbox" checked="{{checked}}">
+    {{name}}
+    <button class="delete">Remove</button>
+  </li>
+</template>
