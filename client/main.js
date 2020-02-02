@@ -15,10 +15,6 @@ Template.body.helpers({
   // 	{name: 'Dubrovnik', ,createdAt: new Date()},
   // ]
 
-  // meteor mongo
-  // db.createCollection('destinations')
-  // db.destinations.insert({name:'Istanbul',createdAt: new Date()});
-  // db.destinations.insert({name:'Dubrovnik',createdAt: new Date()});
   function()
   {
   	console.dir(Places.find({}));

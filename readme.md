@@ -8,6 +8,7 @@
 - https://www.youtube.com/playlist?list=PLLnpHn493BHFYZUSK62aVycgcAouqBt7V
 - https://www.youtube.com/playlist?list=PLLnpHn493BHFbO-wKUSuy9kAbM_EcsSV5
 - https://www.meteor.com/tutorials/blaze/creating-an-app
+- https://www.tutorialspoint.com/meteor/index.htm
 
 ```
 meteor create travel_list
@@ -18,8 +19,9 @@ meteor
 ```
 cd travel_list
 meteor mongo
-db.places.insert({name: 'Blah'})
-db.places.insert({name: 'Whatever'})
+db.createCollection('destinations')
+db.destinations.insert({name:'Istanbul',createdAt: new Date()});
+db.destinations.insert({name:'Dubrovnik',createdAt: new Date()});
 ```
 
 ---
